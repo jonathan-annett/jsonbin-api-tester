@@ -136,8 +136,8 @@ The JSONBinAPI wrapper includes a mock mode for local development. In mock mode,
     ```
 
 2. **Using Real API Keys**
-    - To switch from mock mode to real API interactions, provide your Master and Access API keys.
-
+    - To switch from mock mode to real API interactions, provide a Master or an Access API key.
+    - If you provide both, the access key is ignored.
     ```javascript
     const api = JSONBinAPI(accessApiKey, masterApiKey);
     ```
