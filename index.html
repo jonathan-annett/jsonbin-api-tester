@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSONBinAPI CRUD Tester</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			background-color:#bddfbd;
+		}
+		textarea {
+			width: 100%;
+			height: 100px;
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+		}
+		button {
+			margin: 10px 0;
+			padding: 10px 20px;
+			font-size: 16px;
+		}
+		.output {
+			background: #f4f4f4;
+			padding: 10px;
+			margin-top: 10px;
+			border: 1px solid #ccc;
+		}
+		
+		body.ismaster {
+		    
+		    background-color:red;
+		}
+        body.isaccess {
+        	
+        	background-color:yellow;
+        }
+	</style>
+</head>
+<body>
+
+	<h1>JSONBinAPI CRUD Tester</h1>
+
+	<div>
+		<h3>API Keys</h3>
+		<input type="text" id="masterApiKey" placeholder="Enter Master API Key">
+		<input type="text" id="accessApiKey" placeholder="Enter Access API Key">
+		<button onclick="saveApiKeys()">Save API Keys</button>
+		<button onclick="forgetApiKeys()">Forget API Keys</button>
+	</div>
+
+	<div>
+		<h3>Create a Storage Bin</h3>
+		<textarea id="createData" placeholder="Enter JSON data to create"></textarea>
+		<button onclick="createBin()">Create Bin</button>
+	</div>
+
+	<div>
+		<h3>Retrieve a Storage Bin</h3>
+		<input type="text" id="retrieveId" placeholder="Enter Bin ID">
+		<button onclick="retrieveBin()">Retrieve Bin</button>
+	</div>
+
+	<div>
+		<h3>Update a Storage Bin</h3>
+		<input type="text" id="updateId" placeholder="Enter Bin ID">
+		<textarea id="updateData" placeholder="Enter JSON data to update"></textarea>
+		<button onclick="updateBin()">Update Bin</button>
+	</div>
+
+	<div>
+		<h3>Delete a Storage Bin</h3>
+		<input type="text" id="deleteId" placeholder="Enter Bin ID">
+		<button onclick="deleteBin()">Delete Bin</button>
+	</div>
+
+	<div>
+		<input type="checkbox" id="toggleEncryption" onclick="toggleEncryption(this.checked)">
+		<label for="toggleEncryption">Enable Encryption</label>
+	</div>
+
+	<div id="output" class="output"></div>
+	<div id="listing" class="output"></div>
+
+	<script src="jsonbin.js"></script>
+	<script src="testapi.js" defer></script>
+
+</body>
+</html>
