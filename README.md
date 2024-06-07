@@ -1,6 +1,6 @@
 # jsonbin-api-tester
 
-[live demo](https://github.com/jonathan-annett/jsonbin-api-tester)
+[live demo](https://jonathan-annett.github.io/jsonbin-api-tester/)
 
 This project provides a simple web interface to test CRUD operations with JSONBinAPI. It allows users to create, retrieve, update, and delete storage bins, with optional encryption. The tool also supports saving and forgetting API keys, making it a versatile tool for working with JSONBin.io's API.
 
