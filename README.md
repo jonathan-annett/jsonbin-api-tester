@@ -4,6 +4,10 @@
 
 This project provides a simple web interface to test CRUD operations with JSONBinAPI. It allows users to create, retrieve, update, and delete storage bins, with optional encryption. The tool also supports saving and forgetting API keys, making it a versatile tool for working with JSONBin.io's API.
 
+**includes javascript [wrapper](api.md) around jsonbin.io rest api**
+this is a simple promise based api that can be used to prototype your web app "offline", simulating the storage in the browser, leveraging localStorage
+by opening multiple pages on the same computer, a multi user experience can be simulated, with changes replicated via the browser window's storage event
+
 ## Features
 
 - **Create Storage Bin**: Add JSON data to create a new storage bin.
